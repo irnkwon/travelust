@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import { Text, View } from 'react-native';
-import Explore from './screens/Explore';
 
-class App extends Component {
+class Trip extends Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-          <Explore />
+          <Text>Trip Page</Text>
       </View>
     );
   }
 }
 
-export default App;
+export default Trip;
