@@ -56,7 +56,7 @@ class Trip extends Component {
           onDayPress={this.onDayPress}
         />
         {planDetails.map((i) => 
-          <View style={Theme.boxContainer}>
+          <View style={Theme.boxContainer} key={i.id}>
             <View>
               <Font
                 text={i.title}
