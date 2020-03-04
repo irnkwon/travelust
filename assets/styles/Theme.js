@@ -5,12 +5,24 @@ export default {
     introContainer: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     appContainer: {
         flex: 1,
         alignItems: 'center',
         paddingTop: 100
+    },
+    headingContainer: {
+        marginTop: 30,
+        marginLeft: 30
+    },
+    boxContainer: {
+        borderWidth: 1, 
+        borderColor: Common.LIGHT_GRAY, 
+        padding: 20, 
+        marginHorizontal: 20, 
+        borderRadius: 5,
+        marginBottom: 10
     },
 
     // custom width
@@ -25,6 +37,9 @@ export default {
     center: {
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    row: {
+        flexDirection: 'row'
     },
 
     // buttons
