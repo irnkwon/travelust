@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Intro from './screens/Intro';
+import Trip from './screens/Trip';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Intro />
+        <Trip />
       </React.Fragment>
     );
   }

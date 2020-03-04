@@ -38,11 +38,15 @@ class Font extends React.Component {
                     Common.EXTRA_EXTRA_LARGE_FONT_SIZE)))),
 
                     color: color == 'white' ? Common.WHITE :
-                    (color == 'blue' ? Common.BLUE : Common.NAVY),
+                    (color == 'blue' ? Common.BLUE : 
+                    (color == 'gray' ? Common.GRAY :
+                    Common.BLACK)),
 
                     fontFamily: weight == 'bold' ? Common.BOLD_FONT_STYLE :
                     (weight == 'semi' ? Common.SEMI_FONT_STYLE :
-                    Common.REGULAR_FONT_STYLE),
+                    (weight == 'mid' ? Common.MID_FONT_STYLE :
+                    (size == 'light' ? Common.LIGHT_FONT_STYLE :
+                    Common.REGULAR_FONT_STYLE))),
 
                     textTransform: transform == 'cap' ? 'capitalize' :
                     (transform == 'upper' ? 'uppercase' :
