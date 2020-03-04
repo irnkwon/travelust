@@ -10,8 +10,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "global": "^4.4.0",
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-swiper": "^1.6.0-nightly.5"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
