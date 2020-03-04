@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "global": "^4.4.0",
+    "moment": "^2.24.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-calendars": "^1.264.0",
     "react-native-swiper": "^1.6.0-nightly.5"
   },
   "devDependencies": {
