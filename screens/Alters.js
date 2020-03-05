@@ -86,7 +86,7 @@ const planDetails = [
     desc: 'Your review has been authenticated. Thank you for sharing your thoughts on a local establishment.',
     type: 'review',
     time: '5h'
-},
+  }
 ]
 
 export default Alters;

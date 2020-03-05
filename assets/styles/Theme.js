@@ -33,6 +33,13 @@ export default {
         marginLeft: 'auto',
         marginRight: 30
     },
+    labelContainer: {
+        backgroundColor: Common.BLUE,
+        borderRadius: 4,
+        width: 80,
+        paddingVertical: 2,
+        marginBottom: 5
+    },
 
     // custom width
     customWidth: {
@@ -75,19 +82,31 @@ export default {
         opacity: 0.4
     },
 
-    // illustrations
+    // images
     illus: {
         width: 320, 
         height: 270, 
         resizeMode: 'contain'
     },
+    icons: {
+        width: 80, 
+        height: 80, 
+        resizeMode: 'contain'
+    },
 
-    // dots
+    // dot
     dot: {
         width: 11,
         height: 11,
         borderRadius: 6,
         marginLeft: 10,
         marginRight: 10
+    },
+
+    // line
+    line: {
+        borderColor: Common.LIGHT_GRAY, 
+        borderWidth: 1, 
+        marginVertical: 18
     }
 }
