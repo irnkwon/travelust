@@ -25,7 +25,7 @@ class Trip extends Component {
 
   render() {
     return (
-      <ScrollView style={{ backgroundColor: Common.WHITE }}>
+      <ScrollView style={Theme.appContainer}>
         <View style={Theme.headingContainer}>
           <Font
             size='xl'

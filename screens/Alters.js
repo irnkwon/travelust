@@ -9,7 +9,7 @@ import Font from '../assets/styles/Font';
 class Alters extends Component {
   render() {
     return (
-      <ScrollView style={{ backgroundColor: Common.WHITE }}>
+      <ScrollView style={Theme.appContainer}>
         <View style={[Theme.headingContainer, Theme.row]}>
           <Font
             size='xl'

@@ -9,7 +9,7 @@ class Login extends Component {
     const view = 'login';
     if (view == 'sign up') {
       return (
-        <View style={Theme.appContainer}>
+        <View style={Theme.authContainer}>
           <View></View>
           <Font placeholder='Email address' text='' label='email id' input />
           <Font placeholder='Password' text='' label='password' input />
@@ -34,7 +34,7 @@ class Login extends Component {
       );
     } else if (view == 'login') {
       return(
-        <View style={Theme.appContainer}>
+        <View style={Theme.authContainer}>
             <Font placeholder='Email address' text='' label='email id' input />
             <Font placeholder='Password' text='' label='password' password input />
             <Font

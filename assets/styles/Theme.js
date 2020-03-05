@@ -6,12 +6,16 @@ export default {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        paddingTop: 25,
+        backgroundColor: Common.WHITE
+    },
+    authContainer: {
+        flex: 1,
+        alignItems: 'center',
+        paddingTop: 100,
         backgroundColor: Common.WHITE
     },
     appContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: Common.WHITE
     },
     headingContainer: {
@@ -86,8 +90,8 @@ export default {
 
     // images
     illus: {
-        width: 320, 
-        height: 270, 
+        width: 310, 
+        height: 260, 
         resizeMode: 'contain'
     },
     icons: {

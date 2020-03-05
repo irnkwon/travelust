@@ -8,7 +8,7 @@ import Font from '../assets/styles/Font';
 class Profile extends Component {
   render() {
     return (
-      <ScrollView style={{ backgroundColor: Common.WHITE }}>
+      <ScrollView style={Theme.appContainer}>
         <View style={Theme.headingContainer}>
           <Font
             size='xl'
