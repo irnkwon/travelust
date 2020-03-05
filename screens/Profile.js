@@ -47,17 +47,26 @@ class Profile extends Component {
         {profileMenuDetails.map((i) =>
             <View key={i.id}>
               <View style={[Theme.line, Theme.customWidth, { alignSelf: 'center' }]}></View>
-              <TouchableOpacity 
-                style={[Theme.customWidth, { alignSelf: 'center' }]}
-                onPress={() => i.type == 'logout' ? this.props.navigation.navigate('Login') : null}
-              >
-                  <Font
-                      size='m'
-                      text={i.name}
-                      transform='cap'
-                      color={i.type == 'logout' ? 'blue' : null}
-                  />
-              </TouchableOpacity>
+              {i.type == 'logout' ?
+                (<TouchableOpacity 
+                  style={[Theme.customWidth, { alignSelf: 'center', marginBottom: Common.EXTRA_LARGE_MARGIN }]}
+                  onPress={() => this.props.navigation.navigate('Login')}
+                >
+                    <Font
+                        size='m'
+                        text={i.name}
+                        transform='cap'
+                        color='blue'
+                    />
+                </TouchableOpacity>)
+                : (<TouchableOpacity style={[Theme.customWidth, { alignSelf: 'center' }]}>
+                    <Font
+                        size='m'
+                        text={i.name}
+                        transform='cap'
+                    />
+                </TouchableOpacity>)
+              }
             </View>
         )}
       </ScrollView>
