@@ -13,6 +13,8 @@
     "global": "^4.4.0",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-google-places-autocomplete": "1.4.1",
+    "react-native-searchable-dropdown": "1.1.1",
     "react-native-swiper": "^1.6.0-nightly.5"
   },
   "devDependencies": {
