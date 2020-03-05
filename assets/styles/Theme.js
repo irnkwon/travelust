@@ -16,6 +16,11 @@ export default {
         marginTop: 30,
         marginLeft: 30
     },
+    subHeadingContainer: {
+        marginTop: 30,
+        marginBottom: 15,
+        marginLeft: 30
+    },
     boxContainer: {
         borderWidth: 1, 
         borderColor: Common.LIGHT_GRAY, 
@@ -23,6 +28,10 @@ export default {
         marginHorizontal: 20, 
         borderRadius: 5,
         marginBottom: 10
+    },
+    iconContainer: {
+        marginLeft: 'auto',
+        marginRight: 30
     },
 
     // custom width
@@ -39,7 +48,8 @@ export default {
         alignItems: 'center'
     },
     row: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        alignItems: 'center'
     },
 
     // buttons

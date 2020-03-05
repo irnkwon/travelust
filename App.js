@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Trip from './screens/Trip';
+import Alters from './screens/Alters';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Trip />
+        <Alters />
       </React.Fragment>
     );
   }
