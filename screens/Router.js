@@ -68,8 +68,8 @@ class Router extends Component {
             <Stack.Navigator
             screenOptions={{
                 headerTitleStyle: {
-                fontFamily: Common.SEMI_FONT_STYLE,
-                fontSize: Common.LARGE_FONT_SIZE
+                    fontFamily: Common.SEMI_FONT_STYLE,
+                    fontSize: Common.LARGE_FONT_SIZE
                 }
             }}
             >

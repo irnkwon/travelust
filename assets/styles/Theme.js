@@ -12,7 +12,7 @@ export default {
     authContainer: {
         flex: 1,
         alignItems: 'center',
-        paddingTop: 100,
+        paddingTop: 45,
         backgroundColor: Common.WHITE
     },
     appContainer: {
@@ -98,6 +98,12 @@ export default {
         width: 80, 
         height: 80, 
         resizeMode: 'contain'
+    },
+    logo: {
+        width: 190,
+        height: 90,
+        resizeMode: 'contain',
+        marginBottom: 20
     },
 
     // dot
