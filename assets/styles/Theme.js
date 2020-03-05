@@ -5,12 +5,14 @@ export default {
     introContainer: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: Common.WHITE
     },
     appContainer: {
         flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: 100
+        backgroundColor: Common.WHITE
     },
     headingContainer: {
         marginTop: 30,
@@ -108,5 +110,18 @@ export default {
         borderColor: Common.LIGHT_GRAY, 
         borderWidth: 1, 
         marginVertical: 18
+    },
+
+    // text inputs
+    input: {
+        fontFamily: Common.REGULAR_FONT_STYLE,
+        fontSize: Common.MID_FONT_SIZE,
+        width: 300,
+        height: 48,
+        borderRadius: 6,
+        marginBottom: 15,
+        paddingLeft: 25,
+        borderBottomColor: Common.LIGHT_GRAY,
+        borderBottomWidth: 2
     }
 }
