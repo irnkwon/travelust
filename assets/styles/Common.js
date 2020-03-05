@@ -24,6 +24,7 @@ export const EXTRA_EXTRA_SMALL_FONT_SIZE = 10;
 export const WHITE = '#FFFFFF';
 export const BLUE = '#4FA3D2';
 export const LIGHT_GRAY = '#ECEBED';
+export const MID_GRAY = '#E2E2E2';
 export const GRAY = '#6D7278';
 export const BLACK = '#000000';
 
