@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Login from './screens/Login';
+import Router from './screens/Router';
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Login />
-      </React.Fragment>
+        <React.Fragment>
+          <Router />
+        </React.Fragment>
     );
   }
 }

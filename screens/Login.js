@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import { View, TouchableOpacity } from 'react-native';
 
 import Theme from '../assets/styles/Theme';
-import * as Common from '../assets/styles/Common';
 import Font from '../assets/styles/Font';
 
 class Login extends Component {
   render() {
-    const view = 'sign up';
+    const view = 'login';
     if (view == 'sign up') {
       return (
         <View style={Theme.appContainer}>
@@ -45,6 +44,7 @@ class Login extends Component {
             />
             <TouchableOpacity
                 style={Theme.button}
+                onPress={() => this.props.navigation.navigate('MainScreens')}
             >
                 <Font
                     size='m'

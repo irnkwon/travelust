@@ -40,6 +40,7 @@ class Intro extends Component {
         <View style={{marginBottom: Common.EXTRA_EXTRA_LARGE_MARGIN}}>
           <TouchableOpacity 
               style={Theme.button}
+              onPress={() => this.props.navigation.navigate('Login')}
           >
               <Font
                   size='m'
