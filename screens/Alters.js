@@ -32,12 +32,19 @@ class Alters extends Component {
         {planDetails.map((i) => 
           <View style={Theme.boxContainer} key={i.id}>
             <View>
-              <Font
-                style={{ marginBottom: Common.SMALL_MARGIN }}
-                text={i.title}
-                weight='mid'
-                size='m'
-              />
+              <View style={[Theme.row, {marginBottom: Common.SMALL_MARGIN}]}>
+                <Font
+                  text={i.title}
+                  weight='mid'
+                  size='m'
+                />
+                <Font
+                  style={{ marginLeft: 'auto' }}
+                  text={i.time}
+                  weight='mid'
+                  size='xs'
+                />
+              </View>
               <Font
                 text={i.desc}
                 weight='mid'
@@ -70,15 +77,15 @@ const planDetails = [
     id: 1,
     title: 'Hamdeok Beach is crowded',
     desc: 'Would you like to try alternative places we recommend? Let’s avoid crowded place!',
-    icon: '',
-    type: 'alternative'
+    type: 'alternative',
+    time: '2h'
   },
   {
     id: 2,
     title: 'You’ve earned 20 points!',
     desc: 'Your review has been authenticated. Thank you for sharing your thoughts on a local establishment.',
-    icon: '',
-    type: 'review'
+    type: 'review',
+    time: '5h'
 },
 ]
 
