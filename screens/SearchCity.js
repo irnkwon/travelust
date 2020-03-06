@@ -208,7 +208,7 @@ constructor(props) {
                             style={{
                                 marginLeft: Common.LARGE_MARGIN,
                               }}>
-                             <Image source={require('../assets/images/Myeongjin_Jeonbok.png')}
+                             <Image source={require('../assets/images/myeongjin-jeonbok.png')}
                                              style={Theme.illus} />
                             </TouchableOpacity>
                         <Font

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Router from './screens/Router';
-import SearchCity from './screens/SearchCity'
+import SisterNoodlesRev from './screens/SisterNoodlesRev'
 
 class App extends Component {
   render() {
     return (
         <React.Fragment>
-          <SearchCity />
+          <SisterNoodlesRev />
         </React.Fragment>
     );
   }
