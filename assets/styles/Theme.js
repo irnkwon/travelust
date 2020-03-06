@@ -116,6 +116,11 @@ export default {
         resizeMode: 'contain',
         marginBottom: 20
     },
+    pics: {
+        width: 300,
+        height: 360,
+        resizeMode: 'contain'
+    },
 
     // dot
     dot: {

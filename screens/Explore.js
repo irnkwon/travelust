@@ -106,7 +106,7 @@ constructor(props) {
             transform='cap'
             text='your local points'
           />
-          <TouchableOpacity style={Theme.row}>
+          <TouchableOpacity style={Theme.row} onPress={() => this.props.navigation.navigate('Points')}>
             <MaterialIcon
               name='info'
               alt='info'
