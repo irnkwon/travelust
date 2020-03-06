@@ -87,6 +87,16 @@ export default {
         padding: 10,
         marginVertical: 15
     },
+    longButton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: Common.BLUE,
+        width: 335,
+        height: 48,
+        borderRadius: 24,
+        padding: 10,
+        marginVertical: 15
+    },
     disabledButton: {
         justifyContent: 'center',
         alignItems: 'center',

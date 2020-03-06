@@ -11,6 +11,7 @@ import IntroScreen from './Intro';
 import ExploreScreen from './Explore';
 import TravPointsScreen from './TravPoints';
 import VolPointsScreen from './VolPoints';
+import PlaceDetailsScreens from './PlaceDetails';
 import TripScreen from './Trip';
 import AltersScreen from './Alters';
 import ProfileScreen from './Profile';
@@ -78,6 +79,13 @@ function ExploreScreens() {
                 component={PointsScreens}
                 options={{
                     title: 'Local Points'
+                }}
+            />
+            <Stack.Screen 
+                name="Details"
+                component={PlaceDetailsScreens}
+                options={{
+                    title: 'Sisters Noodles'
                 }}
             />
         </Stack.Navigator>

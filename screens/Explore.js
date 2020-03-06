@@ -190,7 +190,8 @@ constructor(props) {
               style={[
                 Theme.row, 
                 Theme.center, 
-                { flexWrap: 'wrap', 
+                { 
+                  flexWrap: 'wrap', 
                   justifyContent: 'space-evenly',
                   marginTop: Common.SMALL_MARGIN 
                 }
@@ -199,28 +200,30 @@ constructor(props) {
             {placeDetails.map((i) =>
               i.topPicks == true ?
               (<View key={i.id} style={{ marginBottom: Common.EXTRA_SMALL_MARGIN }}>
-                <Image
-                  source={i.img} 
-                  alt={i.name} 
-                  style={{ 
-                    width: 157, 
-                    height: 110, 
-                    marginBottom: Common.SMALL_MARGIN 
-                  }}
-                />
-                <Font
-                  size='m'
-                  weight='semi'
-                  transform='cap'
-                  text={i.name}
-                />
-                <Font
-                  size='s'
-                  weight='mid'
-                  transform='upper'
-                  text={i.type}
-                  color='gray'
-                />
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Details')}>
+                  <Image
+                    source={i.img} 
+                    alt={i.name} 
+                    style={{ 
+                      width: 157, 
+                      height: 110, 
+                      marginBottom: Common.SMALL_MARGIN 
+                    }}
+                  />
+                  <Font
+                    size='m'
+                    weight='semi'
+                    transform='cap'
+                    text={i.name}
+                  />
+                  <Font
+                    size='s'
+                    weight='mid'
+                    transform='upper'
+                    text={i.type}
+                    color='gray'
+                  />
+                </TouchableOpacity>
               </View>) : null
             )}
             </View>
