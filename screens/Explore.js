@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import { View, Image, TouchableOpacity, FlatList, ListItem, TextInput, Text } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
+import SearchableDropdown from 'react-native-searchable-dropdown';
+
 import Theme from '../assets/styles/Theme';
 import * as Common from '../assets/styles/Common';
 import Font from '../assets/styles/Font';
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import SearchableDropdown from 'react-native-searchable-dropdown';
 
 var items = [
         { name: 'Agra, India' },
