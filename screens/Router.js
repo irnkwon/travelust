@@ -92,7 +92,8 @@ function MainScreens() {
                 inactiveTintColor: Common.GRAY,
                 labelStyle: {
                     fontFamily: Common.MID_FONT_STYLE
-                }
+                },
+                keyboardHidesTabBar: true
             }}
         >
             <BottomTab.Screen

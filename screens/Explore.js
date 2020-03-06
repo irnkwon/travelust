@@ -31,14 +31,7 @@ constructor(props) {
     super(props);
 
     this.state = {
-       selectedItems: [
-              {
-                name: 'Tokyo',
-              },
-              {
-                name: 'Toronto',
-              }
-            ]
+      selectedItems: [{ name: 'Tokyo'}, { name: 'Toronto' }]
     };
   }
 
@@ -79,10 +72,13 @@ constructor(props) {
             padding: 10,
             marginTop: 2,
             borderColor: 'transparent',
-            borderWidth: 1
+            borderWidth: 1,
           }}
-          itemsContainerStyle={{ maxHeight: 140 }}
           items={items}
+          itemTextStyle={{
+            fontFamily: Common.REGULAR_FONT_STYLE,
+            marginLeft: Common.LARGE_MARGIN
+          }}
           resetValue={false}
           textInputProps={
             {
@@ -92,7 +88,9 @@ constructor(props) {
               style: {
                   margin: Common.LARGE_MARGIN,
                   borderBottomWidth: 1,
-                  borderBottomColor: Common.LIGHT_GRAY
+                  borderBottomColor: Common.LIGHT_GRAY,
+                  fontFamily: Common.REGULAR_FONT_STYLE,
+                  fontSize: Common.MID_FONT_SIZE
               },
             }
           }
