@@ -6,11 +6,41 @@ export default {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: Common.WHITE
     },
     appContainer: {
         flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: 100
+        backgroundColor: Common.WHITE
+    },
+    headingContainer: {
+        marginTop: 30,
+        marginLeft: 30
+    },
+    subHeadingContainer: {
+        marginTop: 30,
+        marginBottom: 15,
+        marginLeft: 30
+    },
+    boxContainer: {
+        borderWidth: 1, 
+        borderColor: Common.LIGHT_GRAY, 
+        padding: 20, 
+        marginHorizontal: 20, 
+        borderRadius: 5,
+        marginBottom: 10
+    },
+    iconContainer: {
+        marginLeft: 'auto',
+        marginRight: 30
+    },
+    labelContainer: {
+        backgroundColor: Common.BLUE,
+        borderRadius: 4,
+        width: 80,
+        paddingVertical: 2,
+        marginBottom: 5
     },
 
     // custom width
@@ -24,6 +54,10 @@ export default {
     // alignment
     center: {
         justifyContent: 'center',
+        alignItems: 'center'
+    },
+    row: {
+        flexDirection: 'row',
         alignItems: 'center'
     },
 
@@ -50,19 +84,44 @@ export default {
         opacity: 0.4
     },
 
-    // illustrations
+    // images
     illus: {
         width: 320, 
         height: 270, 
         resizeMode: 'contain'
     },
+    icons: {
+        width: 80, 
+        height: 80, 
+        resizeMode: 'contain'
+    },
 
-    // dots
+    // dot
     dot: {
         width: 11,
         height: 11,
         borderRadius: 6,
         marginLeft: 10,
         marginRight: 10
+    },
+
+    // line
+    line: {
+        borderColor: Common.LIGHT_GRAY, 
+        borderWidth: 1, 
+        marginVertical: 18
+    },
+
+    // text inputs
+    input: {
+        fontFamily: Common.REGULAR_FONT_STYLE,
+        fontSize: Common.MID_FONT_SIZE,
+        width: 300,
+        height: 48,
+        borderRadius: 6,
+        marginBottom: 15,
+        paddingLeft: 25,
+        borderBottomColor: Common.LIGHT_GRAY,
+        borderBottomWidth: 2
     }
 }

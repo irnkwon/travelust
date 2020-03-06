@@ -116,6 +116,12 @@ constructor(props) {
                 size = 'xs'
                 text = 'How this works'
                 />
+                <Font
+                    style={{marginTop: Common.LARGE_MARGIN}}
+                      size='l'
+                      weight='semi'
+                      text='2,020 Points'
+                    />
             <TouchableOpacity
                style={Theme.button}>
               <Font

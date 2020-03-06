@@ -7,7 +7,7 @@ export let CUR_HEIGHT = Dimensions.get('window').height;
 // font styles
 export const BOLD_FONT_STYLE = 'Poppins-Bold';
 export const SEMI_FONT_STYLE = 'Poppins-SemiBold';
-export const MEDIUM_FONT_STYLE = 'Poppins-Medium';
+export const MID_FONT_STYLE = 'Poppins-Medium';
 export const REGULAR_FONT_STYLE = 'Poppins-Regular';
 export const LIGHT_FONT_STYLE = 'Poppins-Light';
 
@@ -24,7 +24,9 @@ export const EXTRA_EXTRA_SMALL_FONT_SIZE = 10;
 export const WHITE = '#FFFFFF';
 export const BLUE = '#4FA3D2';
 export const LIGHT_GRAY = '#ECEBED';
+export const MID_GRAY = '#E2E2E2';
 export const GRAY = '#6D7278';
+export const BLACK = '#000000';
 
 // margins
 export const EXTRA_EXTRA_SMALL_MARGIN = 3;
