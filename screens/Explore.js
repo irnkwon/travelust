@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import SearchableDropdown from 'react-native-searchable-dropdown';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
@@ -130,40 +130,175 @@ constructor(props) {
             </TouchableOpacity>
             <Image source={require('../assets/images/explore-illus.png')} style={Theme.illus} />
           </View> : 
-          <View style={Theme.center}>
-            <View style={Theme.row}>
-              <Font
-                color='blue'
-                size='s'
-                text='all'
-                weight='mid'
-                transform='cap'
-              />
-              <Font
-                color='gray'
-                size='s'
-                text='food'
-                weight='mid'
-                transform='cap'
-              />
-              <Font
-                color='gray'
-                size='s'
-                text='Places to stay'
-                weight='mid'
-              />
-              <Font
-                color='gray'
-                size='s'
-                text='Things to do'
-                weight='mid'
-              />
+          <ScrollView>
+            <View style={[Theme.row, Theme.center, { marginBottom: Common.LARGE_MARGIN }]}>
+              <TouchableOpacity style={{ marginRight: Common.LARGE_MARGIN }}>
+                <Font
+                  size='m'
+                  weight='semi'
+                  transform='cap'
+                  text='all'
+                  color='blue'
+                />
+              </TouchableOpacity>
+              <TouchableOpacity style={{ marginRight: Common.LARGE_MARGIN }}>
+                <Font
+                    size='m'
+                    weight='mid'
+                    transform='cap'
+                    text='food'
+                    color='gray'
+                />
+              </TouchableOpacity>
+              <TouchableOpacity style={{ marginRight: Common.LARGE_MARGIN }}>
+                <Font
+                    size='m'
+                    weight='mid'
+                    transform='cap'
+                    text='places to stay'
+                    color='gray'
+                />
+              </TouchableOpacity>
+              <TouchableOpacity style={{ marginRight: Common.LARGE_MARGIN }}>
+                <Font
+                    size='m'
+                    weight='mid'
+                    transform='cap'
+                    text='things to do'
+                    color='gray'
+                />
+              </TouchableOpacity>
             </View>
-          </View>
+            <View style={[Theme.row]}>
+              <Font
+                style={{ marginLeft: Common.LARGE_MARGIN }}
+                size='l'
+                weight='semi'
+                text='Top Local Picks'
+              />
+              <TouchableOpacity style={{ marginLeft: 'auto', marginRight: Common.LARGE_MARGIN }}>
+                <Font
+                  size='s'
+                  weight='mid'
+                  transform='upper'
+                  text='Show All'
+                  color='gray'
+                />
+              </TouchableOpacity> 
+            </View>
+            <View
+              style={[
+                Theme.row, 
+                Theme.center, 
+                { flexWrap: 'wrap', 
+                  justifyContent: 'space-evenly',
+                  marginTop: Common.LARGE_MARGIN 
+                }
+              ]}
+            >
+            {placeDetails.map((i) =>
+              i.topPicks == true ?
+              (<View key={i.id} style={{ marginBottom: Common.EXTRA_SMALL_MARGIN }}>
+                <Image source={i.img} alt={i.name} style={{ width: 157, height: 110 }} />
+                <Font
+                  size='m'
+                  weight='semi'
+                  transform='cap'
+                  text={i.name}
+                />
+                <Font
+                  size='s'
+                  weight='mid'
+                  transform='upper'
+                  text={i.type}
+                  color='gray'
+                />
+              </View>) : null
+            )}
+            </View>
+            <View style={[Theme.row]}>
+              <Font
+                style={{ marginLeft: Common.LARGE_MARGIN }}
+                size='l'
+                weight='semi'
+                text='Others'
+              />
+              <TouchableOpacity style={{ marginLeft: 'auto', marginRight: Common.LARGE_MARGIN }}>
+                <Font
+                  size='s'
+                  weight='mid'
+                  transform='upper'
+                  text='Show All'
+                  color='gray'
+                />
+              </TouchableOpacity> 
+            </View>
+            <View
+              style={[
+                Theme.row, 
+                Theme.center, 
+                { flexWrap: 'wrap', 
+                  justifyContent: 'space-evenly',
+                  marginTop: Common.LARGE_MARGIN 
+                }
+              ]}
+            >
+            {placeDetails.map((i) =>
+              i.topPicks == false ?
+              (<View key={i.id} style={{ marginBottom: Common.EXTRA_SMALL_MARGIN }}>
+                <Image source={i.img} alt={i.name} style={{ width: 157, height: 110 }} />
+                <Font
+                  size='m'
+                  weight='semi'
+                  transform='cap'
+                  text={i.name}
+                />
+                <Font
+                  size='s'
+                  weight='mid'
+                  transform='upper'
+                  text={i.type}
+                  color='gray'
+                />
+              </View>) : null
+            )}
+            </View>
+          </ScrollView>
         }
       </View>
     );
   }
 }
+
+const placeDetails = [
+  {
+    id: 1,
+    name: 'Sisters Noodles',
+    img: require('../assets/images/sisters-noodles.png'),
+    type: 'food',
+    topPicks: true
+  },
+  {
+    id: 2,
+    name: 'Myeongjin Jeonbok',
+    img: require('../assets/images/myeongjin-jeonbok.png'),
+    type: 'food',
+    topPicks: true
+  },
+  {
+    id: 3,
+    name: 'Hotel Regent Marine',
+    img: require('../assets/images/hotel-regent-marine.png'),
+    type: 'places to stay',
+    topPicks: false
+  },
+  {
+    id: 4,
+    name: 'Hamdeok Beach',
+    img: require('../assets/images/hamdeok-beach.png'),
+    type: 'things to do',
+    topPicks: false
+  },
+]
 
 export default Explore;
