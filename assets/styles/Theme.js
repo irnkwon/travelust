@@ -16,6 +16,7 @@ export default {
         backgroundColor: Common.WHITE
     },
     appContainer: {
+        flex: 1,
         backgroundColor: Common.WHITE
     },
     headingContainer: {
@@ -71,6 +72,16 @@ export default {
         alignItems: 'center',
         backgroundColor: Common.BLUE,
         width: 300,
+        height: 48,
+        borderRadius: 24,
+        padding: 10,
+        marginVertical: 15
+    },
+    smallButton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: Common.BLUE,
+        width: 150,
         height: 48,
         borderRadius: 24,
         padding: 10,
