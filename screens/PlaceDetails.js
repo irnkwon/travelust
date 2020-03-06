@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableOpacity } from 'react-native';
+import { View, Image, TouchableOpacity, Modal } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 import Theme from '../assets/styles/Theme';
@@ -8,7 +8,7 @@ import Font from '../assets/styles/Font';
 
 function Details() {
     return(
-        <View style={Theme.customWidth}>
+        <View style={[Theme.customWidth, { marginTop: Common.EXTRA_LARGE_MARGIN }]}>
             <View style={[Theme.row, { marginBottom: Common.SMALL_MARGIN }]}>
                 <MaterialIcon name="phone" size={Common.LARGE_FONT_SIZE} color={Common.BLUE} />
                 <Font
@@ -51,12 +51,12 @@ function Reviews() {
 class PlaceDetails extends Component {
   render() {
     return (
-      <View style={[Theme.appContainer, Theme.center]}>
+      <View style={[Theme.appContainer, { alignItems: 'center' }]}>
         <Image
             source={require('../assets/images/sisters-noodles-big.png')}
-            style={{ width: 303, height: 212, position: 'absolute', top: Common.EXTRA_LARGE_MARGIN }}
+            style={{ width: 303, height: 212, marginTop: Common.EXTRA_EXTRA_LARGE_MARGIN }}
         />
-        <Reviews />
+        <Details />
         <TouchableOpacity style={[Theme.longButton, Theme.row, { position: 'absolute', bottom: Common.MID_MARGIN }]}>
             <MaterialIcon name="add" size={Common.LARGE_FONT_SIZE} color={Common.WHITE} />
             <Font
