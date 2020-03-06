@@ -88,7 +88,7 @@ class PlaceDetails extends Component {
                         <Font
                             size='s'
                             weight='mid'
-                            text='12:30 PM to 1:30 PM'
+                            text='Mar 6, 2020'
                         />
                     </View>
                     <View style={Theme.row}>
@@ -101,7 +101,7 @@ class PlaceDetails extends Component {
                         <Font
                             size='s'
                             weight='mid'
-                            text='Mar 6, 2020'
+                            text='12:30 PM to 1:30 PM'
                         />
                     </View>
                 </View>
