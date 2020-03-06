@@ -9,7 +9,7 @@ import Font from '../assets/styles/Font';
 class Alters extends Component {
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={Theme.appContainer}>
         <View style={[Theme.headingContainer, Theme.row]}>
           <Font
             size='xl'
@@ -53,15 +53,25 @@ class Alters extends Component {
               />
             </View>
             { i.type == 'alternative' ? 
-            <View style={[Theme.row, {marginTop: Common.SMALL_MARGIN}]}>
+            <View style={{ marginTop: Common.SMALL_MARGIN }}>
               <TouchableOpacity>
+                <Font
+                    style={{ marginBottom: Common.EXTRA_SMALL_MARGIN }}
+                    size='s'
+                    color="blue"
+                    weight='mid'
+                    transform='upper'
+                    text='show places'
+                />                
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('Trip')}>
                 <Font
                     style={{ marginRight: Common.MID_MARGIN }}
                     size='s'
                     color="blue"
                     weight='mid'
                     transform='upper'
-                    text='show places'
+                    text='no, edit my schedule'
                 />                
               </TouchableOpacity>
             </View> : null }

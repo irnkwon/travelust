@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, ScrollView, TouchableOpacity } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import moment from 'moment';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 
 import Theme from '../assets/styles/Theme';
 import * as Common from '../assets/styles/Common';
@@ -25,7 +26,7 @@ class Trip extends Component {
 
   render() {
     return (
-      <ScrollView style={{ backgroundColor: Common.WHITE }}>
+      <ScrollView style={Theme.appContainer}>
         <View style={Theme.headingContainer}>
           <Font
             size='xl'
@@ -58,11 +59,14 @@ class Trip extends Component {
         {planDetails.map((i) => 
           <View style={Theme.boxContainer} key={i.id}>
             <View>
-              <Font
-                text={i.title}
-                weight='semi'
-                size='m'
-              />
+              <View style={Theme.row}>
+                <Font
+                  text={i.title}
+                  weight='semi'
+                  size='m'
+                />
+                <MaterialIcon name={i.icon} alt={i.icon} size={20} style={{ marginLeft: 'auto' }} />
+              </View>
               <Font
                 text={i.time}
                 weight='mid'
@@ -102,13 +106,13 @@ const planDetails = [
   {
     id: 1,
     title: 'Hamdeok Beach',
-    icon: '',
+    icon: 'beach-access',
     time: '10:00 AM to 12:00 PM'
   },
   {
     id: 2,
     title: 'Sisters Noodles',
-    icon: '',
+    icon: 'restaurant-menu',
     time: '12:30 PM to 1:30 PM'
 },
 ]

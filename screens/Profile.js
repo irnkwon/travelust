@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, ScrollView } from 'react-native';
+import { View, Image, ScrollView, TouchableOpacity } from 'react-native';
 
 import Theme from '../assets/styles/Theme';
 import * as Common from '../assets/styles/Common';
@@ -8,7 +8,7 @@ import Font from '../assets/styles/Font';
 class Profile extends Component {
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={Theme.appContainer}>
         <View style={Theme.headingContainer}>
           <Font
             size='xl'
@@ -45,14 +45,28 @@ class Profile extends Component {
           </View>
         </View>
         {profileMenuDetails.map((i) =>
-            <View key={i.id} style={[Theme.customWidth, { alignSelf: 'center' }]}>
-                <View style={Theme.line}></View>
-                <Font
-                    size='m'
-                    text={i.name}
-                    transform='cap'
-                    color={i.type == 'logout' ? 'blue' : null}
-                />
+            <View key={i.id}>
+              <View style={[Theme.line, Theme.customWidth, { alignSelf: 'center' }]}></View>
+              {i.type == 'logout' ?
+                (<TouchableOpacity 
+                  style={[Theme.customWidth, { alignSelf: 'center', marginBottom: Common.EXTRA_LARGE_MARGIN }]}
+                  onPress={() => this.props.navigation.navigate('Login')}
+                >
+                    <Font
+                        size='m'
+                        text={i.name}
+                        transform='cap'
+                        color='blue'
+                    />
+                </TouchableOpacity>)
+                : (<TouchableOpacity style={[Theme.customWidth, { alignSelf: 'center' }]}>
+                    <Font
+                        size='m'
+                        text={i.name}
+                        transform='cap'
+                    />
+                </TouchableOpacity>)
+              }
             </View>
         )}
       </ScrollView>
