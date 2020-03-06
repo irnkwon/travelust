@@ -31,7 +31,7 @@ constructor(props) {
     super(props);
 
     this.state = {
-      selectedItems: [{ name: 'Tokyo'}, { name: 'Toronto' }]
+      selectedItems: null
     };
   }
 
@@ -47,7 +47,6 @@ constructor(props) {
   };
   render() {
     return (
-
       <View style={Theme.appContainer}>
         <View style={Theme.headingContainer}>
           <Font
@@ -59,15 +58,9 @@ constructor(props) {
         </View>
         <SearchableDropdown
           onItemSelect={(item) => {
-            const items = this.state.selectedItems;
-            items.push(item)
-            this.setState({ selectedItems: items });
+            this.setState({ selectedItem: item.name });
           }}
           containerStyle={{ padding: 5 }}
-          onRemoveItem={(item, index) => {
-            const items = this.state.selectedItems.filter((sitem) => sitem.id !== item.id);
-            this.setState({ selectedItems: items });
-          }}
           itemStyle={{
             padding: 10,
             marginTop: 2,
@@ -96,46 +89,78 @@ constructor(props) {
           }
           listProps={{ nestedScrollEnabled: true }}
         />
-        <View style={Theme.center}>
-          <Font
-            style={{marginTop: Common.SMALL_MARGIN}}
-            size='m'
-            weight='semi'
-            transform='cap'
-            text='your local points'
-          />
-          <TouchableOpacity style={Theme.row} onPress={() => this.props.navigation.navigate('Points')}>
-            <MaterialIcon
-              name='info'
-              alt='info'
-              size={Common.MID_FONT_SIZE}
-              style={{ color: Common.BLUE, marginRight: Common.EXTRA_SMALL_MARGIN }}
-            />
+        { this.state.selectedItem !== 'Jeju, South Korea' ?
+          <View style={Theme.center}>
             <Font
-              color='blue'
-              size='s'
-              text='How this works?'
-              weight='mid'
+              style={{marginTop: Common.SMALL_MARGIN}}
+              size='m'
+              weight='semi'
+              transform='cap'
+              text='your local points'
             />
-          </TouchableOpacity>
-          <Font
-            style={{ marginTop: Common.SMALL_MARGIN }}
-            size='l'
-            weight='semi'
-            transform='cap'
-            text='2,020 points'
-          />
-          <TouchableOpacity style={Theme.smallButton}>
+            <TouchableOpacity style={Theme.row} onPress={() => this.props.navigation.navigate('Points')}>
+              <MaterialIcon
+                name='info'
+                alt='info'
+                size={Common.MID_FONT_SIZE}
+                style={{ color: Common.BLUE, marginRight: Common.EXTRA_SMALL_MARGIN }}
+              />
+              <Font
+                color='blue'
+                size='s'
+                text='How this works?'
+                weight='mid'
+              />
+            </TouchableOpacity>
             <Font
-                size='m'
-                color="white"
-                weight='semi'
+              style={{ marginTop: Common.SMALL_MARGIN }}
+              size='l'
+              weight='semi'
+              transform='cap'
+              text='2,020 points'
+            />
+            <TouchableOpacity style={Theme.smallButton}>
+              <Font
+                  size='m'
+                  color="white"
+                  weight='semi'
+                  transform='cap'
+                  text='redeem'
+              />
+            </TouchableOpacity>
+            <Image source={require('../assets/images/explore-illus.png')} style={Theme.illus} />
+          </View> : 
+          <View style={Theme.center}>
+            <View style={Theme.row}>
+              <Font
+                color='blue'
+                size='s'
+                text='all'
+                weight='mid'
                 transform='cap'
-                text='redeem'
-            />
-          </TouchableOpacity>
-          <Image source={require('../assets/images/explore-illus.png')} style={Theme.illus} />
-        </View>
+              />
+              <Font
+                color='gray'
+                size='s'
+                text='food'
+                weight='mid'
+                transform='cap'
+              />
+              <Font
+                color='gray'
+                size='s'
+                text='Places to stay'
+                weight='mid'
+              />
+              <Font
+                color='gray'
+                size='s'
+                text='Things to do'
+                weight='mid'
+              />
+            </View>
+          </View>
+        }
       </View>
     );
   }
