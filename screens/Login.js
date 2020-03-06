@@ -18,11 +18,10 @@ class Login extends Component {
     if (view == 'sign up') {
       return (
         <View style={Theme.authContainer}>
-          <Image source={require('../assets/images/logo.png')} alt='logo' style={Theme.logo} />
           <View style={[Theme.row, {marginBottom: Common.EXTRA_LARGE_MARGIN}]}>
             <TouchableOpacity                  
               style={{
-                marginRight: Common.LARGE_MARGIN,
+                marginRight: Common.EXTRA_LARGE_MARGIN,
               }}
               onPress={() => this.setState({ view: 'login' })}
             >
@@ -68,11 +67,10 @@ class Login extends Component {
     } else if (view == 'login') {
       return(
         <View style={Theme.authContainer}>
-            <Image source={require('../assets/images/logo.png')} alt='logo' style={Theme.logo} />
             <View style={[Theme.row, {marginBottom: Common.EXTRA_LARGE_MARGIN}]}>
               <TouchableOpacity                  
                 style={{
-                  marginRight: Common.LARGE_MARGIN,
+                  marginRight: Common.EXTRA_LARGE_MARGIN,
                 }}
               >
                 <Font

@@ -16,6 +16,7 @@ export default {
         backgroundColor: Common.WHITE
     },
     appContainer: {
+        flex: 1,
         backgroundColor: Common.WHITE
     },
     headingContainer: {
@@ -76,6 +77,16 @@ export default {
         padding: 10,
         marginVertical: 15
     },
+    smallButton: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: Common.BLUE,
+        width: 150,
+        height: 48,
+        borderRadius: 24,
+        padding: 10,
+        marginVertical: 15
+    },
     disabledButton: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -104,6 +115,11 @@ export default {
         height: 90,
         resizeMode: 'contain',
         marginBottom: 20
+    },
+    pics: {
+        width: 300,
+        height: 360,
+        resizeMode: 'contain'
     },
 
     // dot
