@@ -159,5 +159,16 @@ export default {
         paddingLeft: 25,
         borderBottomColor: Common.LIGHT_GRAY,
         borderBottomWidth: 2
+    },
+
+    // modal
+    modal: {
+        backgroundColor: Common.WHITE, 
+        width: 296, 
+        height: 236, 
+        alignSelf: 'center', 
+        borderRadius: 5,
+        paddingTop: Common.EXTRA_EXTRA_LARGE_MARGIN,
+        paddingHorizontal: Common.EXTRA_EXTRA_LARGE_MARGIN,
     }
 }
