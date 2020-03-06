@@ -192,14 +192,22 @@ constructor(props) {
                 Theme.center, 
                 { flexWrap: 'wrap', 
                   justifyContent: 'space-evenly',
-                  marginTop: Common.LARGE_MARGIN 
+                  marginTop: Common.SMALL_MARGIN 
                 }
               ]}
             >
             {placeDetails.map((i) =>
               i.topPicks == true ?
               (<View key={i.id} style={{ marginBottom: Common.EXTRA_SMALL_MARGIN }}>
-                <Image source={i.img} alt={i.name} style={{ width: 157, height: 110 }} />
+                <Image
+                  source={i.img} 
+                  alt={i.name} 
+                  style={{ 
+                    width: 157, 
+                    height: 110, 
+                    marginBottom: Common.SMALL_MARGIN 
+                  }}
+                />
                 <Font
                   size='m'
                   weight='semi'
@@ -216,7 +224,7 @@ constructor(props) {
               </View>) : null
             )}
             </View>
-            <View style={[Theme.row]}>
+            <View style={[Theme.row, { marginTop: Common.LARGE_MARGIN }]}>
               <Font
                 style={{ marginLeft: Common.LARGE_MARGIN }}
                 size='l'
@@ -239,14 +247,22 @@ constructor(props) {
                 Theme.center, 
                 { flexWrap: 'wrap', 
                   justifyContent: 'space-evenly',
-                  marginTop: Common.LARGE_MARGIN 
+                  marginTop: Common.SMALL_MARGIN 
                 }
               ]}
             >
             {placeDetails.map((i) =>
               i.topPicks == false ?
               (<View key={i.id} style={{ marginBottom: Common.EXTRA_SMALL_MARGIN }}>
-                <Image source={i.img} alt={i.name} style={{ width: 157, height: 110 }} />
+                <Image 
+                  source={i.img} 
+                  alt={i.name} 
+                  style={{ 
+                    width: 157, 
+                    height: 110, 
+                    marginBottom: Common.SMALL_MARGIN 
+                  }}
+                />
                 <Font
                   size='m'
                   weight='semi'
